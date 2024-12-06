@@ -37,55 +37,42 @@ Rather than simply asking the same questions repeatedly in different ways more s
 
 
 
-Question Types and Controls:
+#### Question Types and Controls:
 
-Memory/Fact Recall Questions:
+##### Memory/Fact Recall Questions:
 
-Direct fact queries: "What is the capital of France?"
-Paraphrased fact queries: "Which city serves as France's capital?"
-Context-embedded queries: "If you were visiting France's seat of government, which city would you be in?"
-Time-varied queries: "What was France's capital in 1950?"
+* Direct fact queries: "What is the capital of France?"
+* Paraphrased fact queries: "Which city serves as France's capital?"
+* Context-embedded queries: "If you were visiting France's seat of government, which city would you be in?"
+* Time-varied queries: "What was France's capital in 1950?"
 
-Control Questions (matched for complexity but not requiring fact recall):
+##### Control Questions (matched for complexity but not requiring fact recall):
 
-Logic questions: "If A is greater than B, and B is greater than C, is A greater than C?"
-Pattern completion: "Complete the sequence: 2, 4, 6, ..."
-Linguistic tasks: "Is this sentence grammatically correct?"
-Novel inference: "If cars could fly, what would roads be used for?"
-
-
-Experimental Design:
-
-A. Block Design:
-
-Run blocks of memory questions followed by control questions
-Alternate between different types of memory questions
-Include rest periods (simple text processing tasks)
-
-B. Controlled Variables:
-
-Match question length
-Control for token count
-Maintain similar grammatical complexity
-Balance positive/negative answers
+* Logic questions: "If A is greater than B, and B is greater than C, is A greater than C?"
+* Pattern completion: "Complete the sequence: 2, 4, 6, ..."
+* Linguistic tasks: "Is this sentence grammatically correct?"
+* Novel inference: "If cars could fly, what would roads be used for?"
 
 
-Analysis Approach:
+#### Experimental Design:
 
-The code provided allows you to:
+##### A. Block Design:
 
-Track activations across different layers
-Compare activation patterns between memory and control tasks
-Identify statistically significant differences in activation
-Map which neurons/attention heads are most active during memory recall
+* Run blocks of memory questions followed by control questions
+* Alternate between different types of memory questions
+* Include rest periods (simple text processing tasks)
+
+##### B. Controlled Variables:
+
+* Match question length
+* Control for token count
+* Maintain similar grammatical complexity
+* Balance positive/negative answers
 
 
-Suggested Extensions:
+# First approach in the code:
 
-
-Compare activation patterns for:
-
-Correct vs incorrect recalls
-Recent vs older training data
-Factual vs inferential responses
-Different knowledge domains (science vs history)
+* Track activations across different layers
+* Compare activation patterns between memory and control tasks
+* Identify statistically significant differences in activation
+* Map which neurons/attention heads are most active during memory recall
