@@ -208,7 +208,7 @@ def run_memory_experiment(
 
         # Add rest period after block
         tracker.clear_activations()
-        rest_output = model(rest_tasks[rest_idx % len(rest_tasks)])
+        _ = model(rest_tasks[rest_idx % len(rest_tasks)])
 
         # Store rest period activations
         for layer_name, activations in tracker.activations.items():
@@ -272,7 +272,7 @@ def run_memory_experiment_batched(
 
             # Run model
             with torch.no_grad():
-                model_output = model(inputs)
+                _ = model(inputs)
 
             # Store activations for each layer
             for layer_name, activations in tracker.activations.items():
@@ -305,7 +305,7 @@ def run_memory_experiment_batched(
         )
 
         with torch.no_grad():
-            rest_output = model(rest_inputs)
+            _ = model(rest_inputs)
 
         # Store rest period activations
         for layer_name, activations in tracker.activations.items():
